@@ -26,13 +26,13 @@ resource "aws_autoscaling_group" "web" {
   }
 }
 
-resource "aws_autoscaling_schedule" "event" {
-  scheduled_action_name  = "event"
-  min_size               = 2
-  max_size               = 5
-  desired_capacity       = 4
-  start_time             = "2022-06-09T12:51:00Z"
-  end_time               = "2022-06-09T12:59:00Z"
-  autoscaling_group_name = aws_autoscaling_group.web.name
-}
+# resource "aws_autoscaling_schedule" "event" {
+#   scheduled_action_name  = "event"
+#   min_size               = 2
+#   max_size               = 5
+#   desired_capacity       = 4
+#   start_time             = "2022-06-09T12:51:00Z"
+#   end_time               = "2022-06-09T12:59:00Z"
+#   autoscaling_group_name = aws_autoscaling_group.web.name
+# }
 
